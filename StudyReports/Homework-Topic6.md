@@ -38,7 +38,7 @@ The following frequency domain parameters were calculated based on the processed
 
 The PSD of the RRI data was estimated using Welch's method. The following figure shows the PSD distribution within the frequency range of 0-0.4 Hz.
 
-![Power Spectral Density (PSD)](../Figures/tp6_psd.png)
+![Power Spectral Density (PSD)](../Figures/tp6_data1night.png)
 
 ## **Conclusion**
 

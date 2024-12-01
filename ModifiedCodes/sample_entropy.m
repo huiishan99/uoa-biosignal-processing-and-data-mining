@@ -23,7 +23,7 @@ function SampEn = sample_entropy(data, m, r)
     B = 0; % Matches for m
     for i = 1:(N - m)
         for j = i + 1:(N - m)
-            if max(abs(X(i, :) - X(j, :))) <= r
+             if max(abs(X(i, :) - X(j, :))) <= r
                 B = B + 1;
             end
         end

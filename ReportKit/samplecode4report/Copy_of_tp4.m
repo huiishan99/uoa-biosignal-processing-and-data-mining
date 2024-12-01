@@ -1,63 +1,3 @@
-# **Homework - Topic 4:**
-# **Processing of Biosignals and Biosignatures**
-
-**Lai Hui Shan M5281022**
-
-## **1. Preprocessing of BBI (Beat-to-Beat Interval) Data**
-
-Based on the sampledata **data1night.txt** as the experimental basis, this task focuses on pre-processing the original BBI data, removing outliers and smoothing the filtered data.
-
-### **Removal of Outliers**
-
-- **Objective:** 
-  - Detect and remove outliers using Grubbs’ method or a median filter.
-- **Method:**
-  - Grubbs’ method calculates a statistical measure 𝐺, where values exceeding a threshold (𝐺>3) are identified as outliers and marked as NaN.
-  - A median filter was applied with a sliding window size of 5 to smooth and handle potential outliers.
-- **Result:**
-  - No significant outliers were detected in the dataset.
-  - Grubbs’ statistic distribution is shown:
-    ![figure1](../Figures/tp4_figure1.png)
-### **Smoothing of Filtered BBI**
-- **Objective:** 
-  - Smooth the filtered BBI data using a wavelet-based smoothing technique.
-- **Method:**
-  - Small oscillations were suppressed using wavelet decomposition with the following parameters:
-    - Wavelet function: bior4.4
-    - Maximum scale: 6
-    - Threshold factor: 0.01
-  - Details from scales 4 and 5 were denoised and reconstructed.
-- **Result:**
-  - The smoothed data demonstrated reduced noise amplitude while maintaining the overall signal structure:
-    ![figure2](../Figures/tp4_figure2.png)
-  - A comparison between the original and smoothed data is presented:
-    ![figure3](../Figures/tp4_figure3.png)
-
-## **2. Missing BBI Data Fill-In**
-
-### **Missing Data Detection**
-
-- Result:
-  - No missing values (NaN) were detected in the dataset.
-  - Both the count of NaN values before and after the fill-in process was zero.
-
-### **Data Fill-In Methods**
-
-Although the dataset had no missing values, the following methods were considered for testing purposes:
-
-1. **Multiple Imputation Method:**
-   - Simulates multiple plausible values for missing data based on observed patterns.
-2. **Bootstrap Method:**
-   - Randomly samples from existing data to generate replacements for missing values.
-
-- **Implementation:**
-  - For testing, NaN values were manually introduced into the data, and the methods were evaluated. The results indicate successful interpolation and restoration of missing points.
-
----
-
-### **Appendices: MATLAB codes**
-
-```
 % Homework: BBI Data Processing
 
 % -----------------------
@@ -158,4 +98,3 @@ legend;
 title('Comparison Between Original and Smoothed Data');
 xlabel('Sample Points');
 ylabel('Amplitude');
-```

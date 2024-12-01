@@ -3,17 +3,13 @@
 
 **Lai Hui Shan M5281022**
 
----
-
-## **1. Data Preprocessing**
+## **Data Preprocessing**
 
 - The raw BBI data was preprocessed using Grubbs’ Test and median filtering.
 - Missing data was handled using linear interpolation and bootstrap resampling.
 - The smoothed BBI data was converted to RRI format and used for frequency domain analysis.
 
----
-
-## **2. HRV Frequency Domain Analysis**
+## **HRV Frequency Domain Analysis**
 
 ### **Parameters and Results**
 
@@ -38,17 +34,13 @@ The following frequency domain parameters were calculated based on the processed
 3. **LF/HF Ratio**:
    - The LF/HF ratio is 0.42, indicating a dominance of high-frequency components in the dataset.
 
----
-
-## **3. Power Spectral Density (PSD) Visualization**
+## **Power Spectral Density (PSD) Visualization**
 
 The PSD of the RRI data was estimated using Welch's method. The following figure shows the PSD distribution within the frequency range of 0-0.4 Hz.
 
 ![Power Spectral Density (PSD)](../Figures/tp6_psd.png)
 
----
-
-## **4. Conclusion**
+## **Conclusion**
 
 - The frequency domain analysis revealed a dominance of high-frequency (HF) components in the dataset, as indicated by the low LF/HF ratio.
 - The low normalized LF and HF power values suggest limited variability in the lower frequency bands.
@@ -123,3 +115,4 @@ xlabel('Frequency (Hz)');
 ylabel('Power/Frequency (dB/Hz)');
 grid on;
 xlim([0, 0.4]);
+```

@@ -92,7 +92,7 @@ The experiment will reconstruct the codes of the two algorithms on the basis of 
 
 1. **Wavelet Transform Method:**
 
-```
+```matlab
 % Clear workspace and command window
 clear; clc;
 

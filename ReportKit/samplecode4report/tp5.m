@@ -1,69 +1,3 @@
-# **Homework - Topic 5:**
-# **Analysis of HRV in the Time Domain**
-
-**Lai Hui Shan M5281022**
-
-## **HRV Time Domain Analysis**
-
-Based on the processed **BBI data** from the previous homework, this experiment focuses on analyzing the heart rate variability (HRV) in the time domain.
-
-### **HRV Time Domain Parameters**
-
-The following HRV parameters were calculated:
-
-1. **Mean RRI (ms)**: Average of all RRI intervals.
-2. **SDNN (ms)**: Standard deviation of all NN intervals, reflecting overall variability.
-3. **RMSSD (ms)**: Root mean square of successive differences between adjacent NN intervals, indicating short-term variability.
-4. **NN50**: Count of adjacent NN interval differences exceeding 50 ms.
-5. **pNN50 (%)**: Percentage of NN50 relative to the total NN intervals.
-6. **HRV Triangular Index**: Total number of NN intervals divided by the height of the histogram peak.
-7. **TINN (ms)**: Baseline width of the NN interval histogram obtained via triangular interpolation.
-
-### **Results**
-
-| **Parameter**        | **Value** |
-| -------------------- | --------- |
-| Mean RRI             | 9.35 ms   |
-| SDNN                 | 12.21 ms  |
-| RMSSD                | 0.37 ms   |
-| NN50                 | 0         |
-| pNN50                | 0.00%     |
-| HRV Triangular Index | 25.70     |
-| TINN                 | 0.03 ms   |
-
-## **Visualizations**
-
-### **RRI Histogram**
-
-- **Objective:** 
-  - Visualize the distribution of RRI intervals.
-- **Result:**
-  - The histogram demonstrates a Gaussian-like distribution:
-    ![figure1](../Figures/tp5.png)
-
-### **Triangular Interpolation**
-
-- **Objective:** 
-  - Calculate the TINN and overlay triangular interpolation on the RRI histogram.
-- **Result:**
-  - The triangular interpolation aligns well with the histogram:
-    ![figure2](../Figures/tp5.png)
-
-## **Observations**
-
-1. The **Mean RRI** value is very small, suggesting a possible unit discrepancy (expected in seconds rather than milliseconds).
-2. Both **NN50** and **pNN50** are zero, indicating no adjacent NN intervals with differences exceeding 50 ms.
-3. **TINN** and **HRV Triangular Index** suggest a narrow RRI distribution, indicating low variability in the dataset.
-
-## **Conclusion**
-
-The HRV analysis shows that the dataset has very low variability and stability. While the calculations are accurate, further analysis is recommended to verify the units and ensure the results align with physiological expectations.
-
----
-
-### **Appendices: MATLAB Code**
-
-```matlab
 % Homework: HRV Time Domain Analysis
 
 % -----------------------
@@ -162,4 +96,3 @@ plot([bin_centers(left_bound), bin_centers(max_bin), bin_centers(right_bound)], 
     [0, max(hist_counts), 0], 'r-', 'LineWidth', 2);
 legend('Histogram', 'Triangular Interpolation');
 hold off;
-```

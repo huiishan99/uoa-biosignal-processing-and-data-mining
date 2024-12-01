@@ -57,7 +57,7 @@ Although the dataset had no missing values, the following methods were considere
 
 ### **Appendices: MATLAB codes**
 
-```
+```matlab
 % Homework: BBI Data Processing
 
 % -----------------------

@@ -36,7 +36,7 @@ Since the sample code **wavelet1hr.m** is primarily based on the discrete wavele
 
 In the **wavelet1hr.m**, change the value of **WAVELET_FUNC** to test different wavelets. **For example:**
 
-```
+```matlab
 % Test Daubechies 4 wavelets
 WAVELET_FUNC = 'db4';
 ```
@@ -45,7 +45,7 @@ In order to compare the performance of different mother wavelet comprehensively,
 
 To test **Mean Squared Error (MSE)** and **Signal-to-Noise Ratio (SNR)**, the following code has been added below the sample code **wavelet1hr.m**:
 
-```
+```matlab
 % Reconstruct the full signal from coefficients c and l
 reconstructed_signal = waverec(c, l, WAVELET_FUNC);
 
@@ -69,7 +69,7 @@ disp(['Elapsed time: ', num2str(elapsed_time), ' seconds']);
 
 After running the modified sample code **wavelet1hr.m**, the MATLAB command window will display. **For example:**
 
-```
+```matlab
 Wavelet function: db4
 Mean Squared Error (MSE): 6.5645e-26
 Signal-to-Noise Ratio (SNR): 229.7855 dB

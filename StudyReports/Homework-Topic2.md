@@ -1,4 +1,5 @@
-# Homework - Decomposition and Reconstruction of Biosignals
+# **Homework - Topic 2:**
+# **Decomposition and Reconstruction of Biosignals**
 
 **Lai Hui Shan M5281022**
 
@@ -10,6 +11,7 @@
   - **wavelet1hr.m** with **data1night.txt**
     ![figure1](../Figures/wavelet1hr-data1night-figure1-bior4.4.png)
     ![figure2](../Figures/wavelet1hr-data1night-figure2-bior4.4.png)
+
 - **wavelet1min.m**
   - **wavelet1min.m** with **data1min1.dat**
     ![figure1](../Figures/wavelet1min-data1min1-figure1-bior4.4.png)
@@ -32,7 +34,7 @@ Since the sample code **wavelet1hr.m** is primarily based on the discrete wavele
 - bior4.4 (Original code)
 - bior3.5
 
-In the **wavelet1hr.m**, change the value of **WAVELET_FUNC** to test different wavelets. For example:
+In the **wavelet1hr.m**, change the value of **WAVELET_FUNC** to test different wavelets. **For example:**
 
 ```
 % Test Daubechies 4 wavelets
@@ -65,7 +67,7 @@ disp(['Signal-to-Noise Ratio (SNR): ', num2str(snr_value), ' dB']);
 disp(['Elapsed time: ', num2str(elapsed_time), ' seconds']);
 ```
 
-After running the modified sample code **wavelet1hr.m**, the MATLAB command window will display, for example:
+After running the modified sample code **wavelet1hr.m**, the MATLAB command window will display. **For example:**
 
 ```
 Wavelet function: db4
